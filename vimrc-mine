@@ -39,7 +39,7 @@ autocmd BufWritePre *.py,*.js,* :call <SID>StripTrailingWhitespaces()
 syntax on
 
 " Color
-color Mustang
+color  wombat
 
 " I have no idea why this is needed
 filetype plugin indent on
