@@ -1,0 +1,46 @@
+
+" Show line numbers
+set nu
+set ruler
+
+set textwidth=78
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+" Handle indentions: only spaces
+set ts=4 sts=4 sw=4 expandtab
+set smartindent
+set autoindent
+
+" Show invisible characters
+set listchars=tab:▸\ ,eol:¬
+nmap <leader>l :set list!<CR>
+
+" Remove trailing whitespaces!
+
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+
+autocmd BufWritePre *.py,*.js,* :call <SID>StripTrailingWhitespaces()
+
+
+" Syntax
+syntax on
+
+" Color
+color Mustang
+
+" I have no idea why this is needed
+filetype plugin indent on
+
