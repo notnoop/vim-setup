@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/notnoop/Projects/church/churchcrm'
+let g:netrw_dirhist_2='/Users/notnoop/Projects/leapfrogrx/AnalyticPortal'
+let g:netrw_dirhist_3='/private/tmp/wiring-test'
+let g:netrw_dirhist_4='/Users/notnoop/Downloads/createyourproglang/jvm_lang'
+let g:netrw_dirhist_5='/Users/notnoop/Projects/scala/classutil'
+let g:netrw_dirhist_6='/Users/notnoop/.vim/ruby/command-t'
+let g:netrw_dirhist_7='/Users/notnoop/Projects/halalfire/emams'
