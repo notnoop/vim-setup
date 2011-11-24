@@ -80,4 +80,7 @@ endfunction
 command! -nargs=1 Find :call Find("<args>")
 
 nmap <C-a> :CommandT<CR>
+set wildignore+=*.o,*.obj,.git,*.class
 
+
+set backspace=2  " make backspace work across lines
